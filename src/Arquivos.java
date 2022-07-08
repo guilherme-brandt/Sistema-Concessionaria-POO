@@ -15,14 +15,19 @@ public class Arquivos {
 
                 DataHora dataNascimento = new DataHora(value.getDataNasc());
                 DataHora dataAdmissao = new DataHora(value.getDataAdmissao());
-                gravaArq.println(value.getNome() + "\t" + value.getRG() + "\t" + dataNascimento.getDia() + "/" + dataNascimento.getMes() + "/" + dataNascimento.getAno() + "-" + dataNascimento.getHorario() + "\t" + dataAdmissao.getDia() + "/" + dataAdmissao.getMes() + "/" + dataAdmissao.getAno() + "-" + dataAdmissao.getHorario() + "\t" + value.getSalario() + "\t" + value.getAnosExp()+"\t"+value.getLogin()+"\t"+value.getSenha());
+                gravaArq.println(value.getNome() + "\t" + value.getRG() + "\t" + dataNascimento.getDia() + "/" + dataNascimento.getMes() + "/" + dataNascimento.getAno() + "-" + dataNascimento.getHorario() + "\t" + dataAdmissao.getDia() + "/" + dataAdmissao.getMes() + "/" + dataAdmissao.getAno() + "-" + dataAdmissao.getHorario() + "\t" + value.getSalario() + "\t" + value.getAnosExp() + "\t" + value.getLogin() + "\t" + value.getSenha());
             }
             arq.close();
         } catch (IOException e) {
             System.err.println("Erro na gravação dos dados");
+        } catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
         }
-    }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
+        }
 
+    }
     public void lerDadosGerentes(ArrayList<Gerente> gerentes) {
         try {
 
@@ -60,10 +65,16 @@ public class Arquivos {
 
             }
             arq.close();
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             System.err.println("Atenção: ainda não há registro de gerentes no sistema");
-        }catch (IndexOutOfBoundsException ee){
-
+        } catch (ArrayIndexOutOfBoundsException er) {
+        System.err.println("Erro na gravação dos dados");
+        } catch (IndexOutOfBoundsException ee){
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
@@ -82,6 +93,12 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (ArrayIndexOutOfBoundsException er) {
+        System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
             System.err.println("Erro na gravação dos dados");
         }
     }
@@ -136,8 +153,13 @@ public class Arquivos {
             arq.close();
         } catch (IOException e) {
             System.err.println("Atenção: ainda não há registro de vendedores no sistema");
-        }catch (IndexOutOfBoundsException ee){
-
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
@@ -153,8 +175,15 @@ public class Arquivos {
                 gravaArq.println(value.getChassi() + "\t" + value.getMarca() + "\t" + value.getModelo() + "\t" + value.getAno() + "\t" + value.getCombustivel() + "\t" + value.getQuilometragem() + "\t" + value.getPeso() + "\t" + value.getPotencia() + "\t" + value.getCilindros() + "\t" + value.getOcupantes() + "\t" + value.getTipo() + "\t" + value.getAltura() + "\t" + value.getLargura() + "\t" + value.getComprimento());
             }
             arq.close();
-        }catch(IOException e){
-                System.err.println("Erro na gravação dos dados");
+        }catch (IOException e) {
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
@@ -170,7 +199,14 @@ public class Arquivos {
                 gravaArq.println(value.getChassi() + "\t" + value.getMarca() + "\t" + value.getModelo() + "\t" + value.getAno() + "\t" + value.getCombustivel() + "\t" + value.getQuilometragem() + "\t" + value.getPeso() + "\t" + value.getCilindradas() + "\t" + value.getTipo());
             }
             arq.close();
-        }catch(IOException e){
+        }catch (IOException e) {
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
             System.err.println("Erro na gravação dos dados");
         }
     }
@@ -205,7 +241,11 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
-            System.err.println("Atenção: ainda não há registro de carros no sistema");
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
@@ -234,7 +274,14 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
-            System.err.println("Atenção: ainda não há registro de motos no sistema");
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
@@ -251,6 +298,13 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
             System.err.println("Erro na gravação dos dados");
         }
     }
@@ -288,7 +342,14 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
-            System.err.println("Atenção: ainda não há registro de clientes no sistema");
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
@@ -316,8 +377,16 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
             System.err.println("Erro na gravação dos dados");
         }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
+        }
+
     }
 
     public void gravaDadosPrazo(ArrayList<Prazo> prazos) {
@@ -344,6 +413,13 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
             System.err.println("Erro na gravação dos dados");
         }
     }
@@ -383,7 +459,14 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
-            System.err.println("Atenção: ainda não há registro de vendas à vista no sistema");
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
@@ -429,7 +512,14 @@ public class Arquivos {
             }
             arq.close();
         } catch (IOException e) {
-            System.err.println("Atenção: ainda não há registro de vendas à prazo no sistema");
+            System.err.println("Atenção: ainda não há registro de vendedores no sistema");
+        }catch (ArrayIndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }catch (IndexOutOfBoundsException er) {
+            System.err.println("Erro na gravação dos dados");
+        }
+        catch (NumberFormatException eee){
+            System.err.println("Erro na gravação dos dados");
         }
     }
 
